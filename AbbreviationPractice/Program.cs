@@ -50,9 +50,23 @@ namespace AbbreviationPractice
                 counter++;
             }
 
-            foreach(string word in abbrevWords)
+            
+            for(int x = 0; x < abbrevWords.Count; x++)
             {
-                Console.WriteLine(word);
+                abbrevWords[x] = abbrevWords[x].Trim();
+                //Console.WriteLine(abbrevWords[x]);
+
+                int midlength = (abbrevWords[x].Length) - 2;
+                string midlengthstring = midlength.ToString();
+                char firstchar = abbrevWords[x][0];
+                char lastchar = abbrevWords[x][abbrevWords[x].Length - 1];
+
+                Console.WriteLine(firstchar + midlengthstring + lastchar);
+            }
+
+            foreach (string word in abbrevWords)
+            {
+                
             }
         }
     }
